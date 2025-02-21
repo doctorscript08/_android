@@ -1,0 +1,241 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'Android';
+    src: url('../fonts/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-size: normal;
+}
+
+:root {
+    --color0: #c5ebd6;
+    --color1: #83e1ad;
+    --color2: #3ddc84;
+    --color3: #2fa866;
+    --color4: #1a5c37;
+    --color5: #063d1e;
+
+    --standard-font: Arial, Helvetica, sans-serif;
+    --featured-font: 'Bebas Neue', cursive;
+    --adroid-font: 'Android', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    border: none;
+    outline: none;
+}
+
+body {
+    background-color: var(--color0);
+    font-family: var(--standard-font);
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    min-height: 150px;
+    background-image: linear-gradient(to bottom, var(--color2), var(--color3), var(--color4), var(--color5));
+}
+
+header > h1 {
+    color: #fff;
+    font-family: var(--featured-font);
+    font-size: 1.9em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+header > p {
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--color5);
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.list {
+    display: none;
+}
+
+nav .list a {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 10px;
+    transition-duration: .5s;
+}
+
+nav .list a:hover {
+    transform: scale(1.1);
+}
+
+.open {
+    display: block;
+}
+
+main {
+    min-width: 320px;
+    max-width: 800px;
+    padding: 15px;
+    margin: 0px auto 50px auto;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+main .pequena {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+main .destaque {
+    color: var(--color4);
+    font-weight: 800;
+}
+
+main a {
+    color: var(--color4);
+    font-weight: 600;
+    background-color: var(--color1);
+}
+
+main a::after {
+    content: "\1F517";
+}
+
+main h1, h2 {
+    font-family: var(--adroid-font);
+    font-size: 1.4em;
+    color: var(--color4);
+    margin-bottom: 20px;
+}
+
+main h2 {
+    background-image: linear-gradient(to right, var(--color1), transparent);
+    padding-left: 5px;
+}
+
+main p {
+    text-align: justify;
+    text-indent: 25px;
+    margin: 10px 0px 10px 0px;
+    letter-spacing: 1px;
+    line-height: 1.2em;
+}
+
+main #video {
+    width: 100%;
+    height: 315px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    background-color: var(--color5);
+}
+
+main aside {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color1);
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+aside > h3 {
+    color: #fff;
+    background-color: var(--color3);
+    margin: -10px -10px 10px -10px;
+    border-radius: 20px 20px 0 0;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+aside p:last-child {
+    margin-bottom: 0px;
+}
+
+aside ul {
+    width: 100%;
+    text-align: center;
+    list-style-type: '\2714\0020';
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+aside ul li {
+    line-height: 1.5em;
+}
+
+footer {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--color5);
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--color1);
+}
+
+@media screen and (min-width: 428px) {
+    header > h1 {
+        font-size: 2.5em;
+    }
+
+    aside ul {
+        columns: 2;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        text-align: left;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    nav .list {
+        display: block;
+    }
+
+    nav .list a {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+}
